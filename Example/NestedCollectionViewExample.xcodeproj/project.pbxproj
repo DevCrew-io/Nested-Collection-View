@@ -23,6 +23,7 @@
 		77322F2E29E523B500D455FF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77322F2D29E523B500D455FF /* MainViewController.swift */; };
 		77322F3029E525FB00D455FF /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77322F2F29E525FB00D455FF /* MainModel.swift */; };
 		776F3B2B29E672B3006FD46D /* NestedCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 776F3B2A29E672B3006FD46D /* NestedCollectionView */; };
+		776F3B2F29E67851006FD46D /* NestedCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 776F3B2E29E67851006FD46D /* NestedCollectionView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776F3B2F29E67851006FD46D /* NestedCollectionView in Frameworks */,
 				776F3B2B29E672B3006FD46D /* NestedCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +196,7 @@
 			name = NestedCollectionViewExample;
 			packageProductDependencies = (
 				776F3B2A29E672B3006FD46D /* NestedCollectionView */,
+				776F3B2E29E67851006FD46D /* NestedCollectionView */,
 			);
 			productName = NestedCollectionViewExample;
 			productReference = 772CCAD629E00ABF00D5E9E9 /* NestedCollectionViewExample.app */;
@@ -223,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 772CCACD29E00ABE00D5E9E9;
+			packageReferences = (
+				776F3B2D29E67851006FD46D /* XCRemoteSwiftPackageReference "Nested-Collection-View" */,
+			);
 			productRefGroup = 772CCAD729E00ABF00D5E9E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -480,9 +486,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		776F3B2D29E67851006FD46D /* XCRemoteSwiftPackageReference "Nested-Collection-View" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DevCrew-io/Nested-Collection-View";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		776F3B2A29E672B3006FD46D /* NestedCollectionView */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = NestedCollectionView;
+		};
+		776F3B2E29E67851006FD46D /* NestedCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 776F3B2D29E67851006FD46D /* XCRemoteSwiftPackageReference "Nested-Collection-View" */;
 			productName = NestedCollectionView;
 		};
 /* End XCSwiftPackageProductDependency section */

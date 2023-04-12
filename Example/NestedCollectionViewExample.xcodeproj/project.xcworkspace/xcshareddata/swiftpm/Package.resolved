@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "nested-collection-view",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DevCrew-io/Nested-Collection-View",
+      "state" : {
+        "branch" : "main",
+        "revision" : "836bd375dd737aba2397c974deee9b3f164c1583"
+      }
+    }
+  ],
+  "version" : 2
+}
