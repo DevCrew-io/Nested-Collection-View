@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SliderCellView" customModule="NestedCollectionViewExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfa-b7-hoA">
+                        <rect key="frame" x="16" y="8" width="336" height="129"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tfa-b7-hoA" secondAttribute="trailing" constant="16" id="5UL-zf-YA6"/>
+                <constraint firstItem="tfa-b7-hoA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Zc2-Lh-QAw"/>
+                <constraint firstItem="tfa-b7-hoA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="gNr-6K-GvW"/>
+                <constraint firstAttribute="bottom" secondItem="tfa-b7-hoA" secondAttribute="bottom" constant="8" id="zDX-3s-ks9"/>
+            </constraints>
+            <size key="customSize" width="368" height="145"/>
+            <connections>
+                <outlet property="imgSlider" destination="tfa-b7-hoA" id="gs3-xm-z8D"/>
+            </connections>
+            <point key="canvasLocation" x="47.328244274809158" y="53.169014084507047"/>
+        </collectionViewCell>
+    </objects>
+</document>
