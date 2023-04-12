@@ -1,11 +1,8 @@
 # Nested-Collection-View
 
-![Demo](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/Media/NestedCollectionView-Example.gif)
-
-## What is it?
-
 This is a multi-level scrolling view with horizontal scrollable items in a vertical scroll. It supports multiple vertical sections, each with its own set of horizontally scrollable items. Built using Swift and UICollectionView, this view provides an intuitive and interactive way to showcase content with a rich and engaging user interface.
 
+![Demo](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/Media/NestedCollectionView-Example.gif)
 
 ## Requirements
 
@@ -112,4 +109,4 @@ If you have any questions or comments about Nested Collection View, please feel 
 
 ## Acknowledgments
 
-Nested Collection View was created by the DevCrew.io team.
+Nested Collection View was created by the [DevCrew.io](https://devcrew.io) team.
