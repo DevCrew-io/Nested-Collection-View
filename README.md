@@ -1,5 +1,8 @@
 # Nested-Collection-View
 
+[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE)
+![](https://img.shields.io/badge/Code-Swift-informational?style=flat&logo=swift&color=FFA500)
+
 This is a multi-level scrolling view with horizontal scrollable items in a vertical scroll. It supports multiple vertical sections, each with its own set of horizontally scrollable items. Built using Swift and UICollectionView, this view provides an intuitive and interactive way to showcase content with a rich and engaging user interface.
 
 ![Demo](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/Media/NestedCollectionView-Example.gif)
@@ -63,7 +66,7 @@ let nestedCollectionView = NestedCollectionView(frame: CGRect.zero)
 Then add your nested collection view delegate:
 
 ```swift
-    collectionView.delegate = self
+collectionView.delegate = self
 ```
 
 Finally, add the nested collection view to your view hierarchy:
@@ -99,13 +102,25 @@ And that's it! Now you can use the follwoing delegate method to setup a collecti
 }
 ```
 
-## Contributions
+## Author
 
-Contributions to Nested Collection View are always welcome! See [Contributors](https://github.com/DevCrew-io/Nested-Collection-View/graphs/contributors) for details.
-
-## Contact
+[DevCrew.IO](https://devcrew.io/)
 
 If you have any questions or comments about Nested Collection View, please feel free to contact us at info@devcrew.io.
+
+<h3 align="left">Connect with Us:</h3>
+<p align="left">
+<a href="https://devcrew.io" target="blank"><img align="center" src="https://devcrew.io/wp-content/uploads/2022/09/logo.svg" alt="devcrew.io" height="35" width="35" /></a>
+<a href="https://www.linkedin.com/company/devcrew-io/mycompany/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mycompany" height="30" width="40" /></a>
+<a href="https://www.facebook.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="devcrew.io" height="30" width="40" /></a>
+<a href="https://www.instagram.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="devcrew.io" height="30" width="40" /></a>
+<a href="https://github.com/DevCrew-io" target="blank"><img align="center" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="DevCrew-io" height="32" width="32" /></a>
+</p>
+
+
+## Contributing 
+Contributions, issues, and feature requests are welcome! See [Contributors](https://github.com/DevCrew-io/Nested-Collection-View/graphs/contributors) for details.
+
 
 ## Acknowledgments
 
