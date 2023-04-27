@@ -28,7 +28,7 @@ import PackageDescription
 let package = Package(
     name: "YOUR_PROJECT_NAME",
     dependencies: [
-        .package(url: "https://github.com/DevCrew-io/Nested-Collection-View", from: "1.0.0"),
+        .package(url: "https://github.com/DevCrew-io/Nested-Collection-View.git", from: "1.0.0"),
     ]
 )
 ```
