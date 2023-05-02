@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     // MARK: - Outlets -
     @IBOutlet weak var collectionView: NestedCollectionView! {
         didSet {
+            collectionView.dataSource = self
             collectionView.delegate = self
             
             collectionView.register(UINib(nibName: "MainCellView", bundle: nil), forCellWithReuseIdentifier: MainCellView.cellIdentifier)
@@ -43,7 +44,7 @@ extension MainViewController: MainViewModelDelegate {
 }
 
 // MARK: - NestedCollectionViewDelegate Delegate -
-extension MainViewController: NestedCollectionViewDelegate {
+extension MainViewController: NestedCollectionViewDataSource, NestedCollectionViewDelegate {
     func numberOfSections(in collectionView: NestedCollectionView) -> Int {
         return viewModel.allCategorysList.count
     }
