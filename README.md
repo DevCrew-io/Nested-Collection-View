@@ -75,10 +75,9 @@ Finally, add the nested collection view to your view hierarchy:
 ```swift
 view.addSubview(nestedCollectionView)
 ```
-And that's it! Now you can use the follwoing delegate method to setup a collection view just like a normal collection view datasouce & delegate methods.
+And that's it! Now you can use the follwoing datasourcee & delegate method to setup a collection view just like a normal collection view datasouce & delegate methods.
 
 ```swift
-@objc public protocol NestedCollectionViewDelegate: AnyObject {
     func numberOfSections(in collectionView: NestedCollectionView) -> Int
     func collectionView(_ collectionView: NestedCollectionView, numberOfItemsInSection section: Int) -> Int
     func collectionView(_ collectionView: NestedCollectionView, reuseIdentifierForCellAt indexPath: IndexPath) -> String
@@ -100,7 +99,6 @@ And that's it! Now you can use the follwoing delegate method to setup a collecti
     
     @objc optional func collectionViewWillEndDraggingHorizontally(_ collectionView: NestedCollectionView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>, section: Int)
     @objc optional func collectionViewWillEndDraggingVertically(_ collectionView: NestedCollectionView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
-}
 ```
 
 ## Author
