@@ -6,34 +6,11 @@
 
 import UIKit
 
-@objc public protocol NestedCollectionViewDelegate: AnyObject {
-    func numberOfSections(in collectionView: NestedCollectionView) -> Int
-    func collectionView(_ collectionView: NestedCollectionView, numberOfItemsInSection section: Int) -> Int
-    func collectionView(_ collectionView: NestedCollectionView, reuseIdentifierForCellAt indexPath: IndexPath) -> String
-    func collectionView(_ collectionView: NestedCollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, sizeForItemAt indexPath: IndexPath) -> CGSize
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, insetForSectionAt section: Int) -> UIEdgeInsets
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, minimumLineSpacingForSectionAt section: Int) -> CGFloat
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, referenceSizeForHeaderInSection section: Int) -> CGSize
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, referenceSizeForFooterInSection section: Int) -> CGSize
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, didSelectItemAt indexPath: IndexPath)
-    
-    #if os(iOS)
-    @objc optional func collectionView(_ collectionView: NestedCollectionView, shouldEnablePagingAt section: Int) -> Bool
-    #endif
-    
-    @objc optional func collectionViewDidScrollHorizontally(_ collectionView: NestedCollectionView, toOffset offset: CGPoint, inSection section: Int)
-    @objc optional func collectionViewDidScrollVertically(_ collectionView: NestedCollectionView, toOffset offset: CGPoint)
-    
-    @objc optional func collectionViewWillEndDraggingHorizontally(_ collectionView: NestedCollectionView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>, section: Int)
-    @objc optional func collectionViewWillEndDraggingVertically(_ collectionView: NestedCollectionView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
-}
-
 public class NestedCollectionView: UIView {
     
+    public weak var dataSource: NestedCollectionViewDataSource?
     public weak var delegate: NestedCollectionViewDelegate?
-    
+
     private var outerCollectionView: UICollectionView!
     private let collectionViewCellIndentifier = String(describing: OuterCollectionViewCell.self)
     private var cellClassesReuseRegistry: [String: AnyClass?] = [:]
@@ -459,7 +436,7 @@ extension NestedCollectionView: UICollectionViewDelegateFlowLayout {
             }
         }
 
-        if delegate?.collectionView?(self, shouldEnablePagingAt: actualSection) ?? false {
+        if dataSource?.collectionView?(self, shouldEnablePagingAt: actualSection) ?? false {
             insets.left = .zero
             insets.right = .zero
         }
@@ -481,7 +458,7 @@ extension NestedCollectionView: UICollectionViewDelegateFlowLayout {
         var spacing = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumLineSpacing
         guard let innerCollectionView = collectionView as? InnerCollectionView else { return spacing }
         
-        if delegate?.collectionView?(self, shouldEnablePagingAt: innerCollectionView.section) ?? false {
+        if dataSource?.collectionView?(self, shouldEnablePagingAt: innerCollectionView.section) ?? false {
             return .zero
         }
         
@@ -545,7 +522,7 @@ extension NestedCollectionView: UICollectionViewDataSource {
     */
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         if collectionView == outerCollectionView {
-            return delegate?.numberOfSections(in: self) ?? 0
+            return dataSource?.numberOfSections(in: self) ?? 0
         }
         
         return 1
@@ -568,7 +545,7 @@ extension NestedCollectionView: UICollectionViewDataSource {
         }
         
         let innerCollectionView = collectionView as! InnerCollectionView
-        return delegate?.collectionView(self, numberOfItemsInSection: innerCollectionView.section) ?? 0
+        return dataSource?.collectionView(self, numberOfItemsInSection: innerCollectionView.section) ?? 0
     }
     
     /**
@@ -590,7 +567,7 @@ extension NestedCollectionView: UICollectionViewDataSource {
             outerCollectionViewCell.innerCollectionView.setContentOffset(.zero, animated: false)
             
             #if os(iOS)
-            let pagingEnabled = delegate?.collectionView?(self, shouldEnablePagingAt: indexPath.section) ?? false
+            let pagingEnabled = dataSource?.collectionView?(self, shouldEnablePagingAt: indexPath.section) ?? false
             outerCollectionViewCell.innerCollectionView.isPagingEnabled = pagingEnabled
             #endif
             
@@ -609,7 +586,7 @@ extension NestedCollectionView: UICollectionViewDataSource {
         let innerCollectionView = collectionView as! InnerCollectionView
         let innerCollectionViewItemIndex = IndexPath(item: indexPath.item, section: innerCollectionView.section)
         
-        if let cellIdentifier = delegate?.collectionView(self, reuseIdentifierForCellAt: innerCollectionViewItemIndex) {
+        if let cellIdentifier = dataSource?.collectionView(self, reuseIdentifierForCellAt: innerCollectionViewItemIndex) {
             let cell = innerCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: innerCollectionViewItemIndex)
             delegate?.collectionView(self, willDisplay: cell, forItemAt: innerCollectionViewItemIndex)
             return cell
