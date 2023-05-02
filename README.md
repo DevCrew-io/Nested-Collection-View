@@ -28,7 +28,7 @@ import PackageDescription
 let package = Package(
     name: "YOUR_PROJECT_NAME",
     dependencies: [
-        .package(url: "https://github.com/DevCrew-io/Nested-Collection-View.git", from: "1.0.0"),
+        .package(url: "https://github.com/DevCrew-io/Nested-Collection-View.git", from: "1.0.2"),
     ]
 )
 ```
@@ -44,6 +44,7 @@ import NestedCollectionView
 
     @IBOutlet weak var collectionView: NestedCollectionView! {
         didSet {
+            collectionView.dataSource = self
             collectionView.delegate = self
             
             collectionView.register(UINib(nibName: "MainCellView", bundle: nil), forCellWithReuseIdentifier: MainCellView.cellIdentifier)
