@@ -2,6 +2,8 @@
 
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE)
 ![](https://img.shields.io/badge/Code-Swift-informational?style=flat&logo=swift&color=FFA500)
+[![Github tag](https://img.shields.io/github/v/tag/DevCrew-io/chatgpt-ios-sdk.svg)]()
+
 
 This is a multi-level scrolling view with horizontal scrollable items in a vertical scroll. It supports multiple vertical sections, each with its own set of horizontally scrollable items. Built using Swift and UICollectionView, this view provides an intuitive and interactive way to showcase content with a rich and engaging user interface.
 
@@ -18,6 +20,19 @@ Nested Collection View has no other requirements or dependencies, and can be eas
 
 ## Installation
 
+#### CocoaPods (iOS 8+, OS X 10.9+)
+
+You can use [CocoaPods](http://cocoapods.org/) to install `NestedCollectionView` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyApp' do
+    pod 'NestedCollectionView', '~> 1.0.2'
+end
+```
+
 #### Swift Package Manager
 
 You can use [The Swift Package Manager](https://swift.org/package-manager) to install `NestedCollectionView` by adding the proper description to your `Package.swift` file:
@@ -32,6 +47,14 @@ let package = Package(
     ]
 )
 ```
+
+### Manually
+If you prefer not to use any of the aforementioned dependency managers, you can integrate **NestedCollectionView** into your project manually.
+
+1. Download zip file
+2. Open NestedCollectionView/Sources/
+3. Drag and drop NestedCollectionView folder into your project
+
 
 ## Usage
 
@@ -102,17 +125,14 @@ func collectionView(_ collectionView: NestedCollectionView, willDisplay cell: UI
 ```
 
 ## Author
-
 [DevCrew.IO](https://devcrew.io/)
 
-If you have any questions or comments about Nested Collection View, please feel free to contact us at info@devcrew.io.
+If you have any questions or comments about **NestedCollectionView** , please feel free to contact us at hello@devcrew.io
 
 <h3 align="left">Connect with Us:</h3>
 <p align="left">
 <a href="https://devcrew.io" target="blank"><img align="center" src="https://devcrew.io/wp-content/uploads/2022/09/logo.svg" alt="devcrew.io" height="35" width="35" /></a>
 <a href="https://www.linkedin.com/company/devcrew-io/mycompany/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mycompany" height="30" width="40" /></a>
-<a href="https://www.facebook.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="devcrew.io" height="30" width="40" /></a>
-<a href="https://www.instagram.com/devcrew.io" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="devcrew.io" height="30" width="40" /></a>
 <a href="https://github.com/DevCrew-io" target="blank"><img align="center" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="DevCrew-io" height="32" width="32" /></a>
 </p>
 
@@ -120,7 +140,14 @@ If you have any questions or comments about Nested Collection View, please feel 
 ## Contributing 
 Contributions, issues, and feature requests are welcome! See [Contributors](https://github.com/DevCrew-io/Nested-Collection-View/graphs/contributors) for details.
 
+### Contributions
+Any contribution is more than welcome! You can contribute through pull requests and issues on GitHub.
 
-## Acknowledgments
+### Show your Support
+Give a star if this project helped you.
 
-Nested Collection View was created by the [DevCrew.io](https://devcrew.io) team.
+### Copyright & License
+Code copyright 2023 DevCrew I/O. Code released under the [MIT license](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE).
+
+## Contributing 
+Contributions, issues, and feature requests are welcome! See [Contributors](https://github.com/DevCrew-io/Nested-Collection-View/graphs/contributors) for details.
