@@ -2,7 +2,7 @@
 
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE)
 ![](https://img.shields.io/badge/Code-Swift-informational?style=flat&logo=swift&color=FFA500)
-[![Github tag](https://img.shields.io/github/v/tag/DevCrew-io/chatgpt-ios-sdk.svg)]()
+[![Github tag](https://img.shields.io/github/v/tag/DevCrew-io/Nested-Collection-View.svg)]()
 
 
 This is a multi-level scrolling view with horizontal scrollable items in a vertical scroll. It supports multiple vertical sections, each with its own set of horizontally scrollable items. Built using Swift and UICollectionView, this view provides an intuitive and interactive way to showcase content with a rich and engaging user interface.
