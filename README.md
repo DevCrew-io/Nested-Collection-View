@@ -147,7 +147,4 @@ Any contribution is more than welcome! You can contribute through pull requests 
 Give a star if this project helped you.
 
 ### Copyright & License
-Code copyright 2023 DevCrew I/O. Code released under the [MIT license](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE).
-
-## Contributing 
-Contributions, issues, and feature requests are welcome! See [Contributors](https://github.com/DevCrew-io/Nested-Collection-View/graphs/contributors) for details.
+Code copyright 2023 DevCrew I/O. Code released under the [MIT license](https://github.com/DevCrew-io/Nested-Collection-View/blob/main/LICENSE)
